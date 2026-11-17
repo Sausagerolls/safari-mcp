@@ -1,0 +1,28 @@
+{
+  "name": "safari-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that lets Claude Code drive Safari on macOS (tabs, navigation, DOM refs, clicks, typing, screenshots, console and network).",
+  "type": "module",
+  "bin": {
+    "safari-mcp": "server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sausagerolls/safari-mcp.git"
+  },
+  "homepage": "https://github.com/Sausagerolls/safari-mcp#readme",
+  "keywords": [
+    "mcp",
+    "safari",
+    "claude-code",
+    "browser-automation",
+    "macos"
+  ]
+}

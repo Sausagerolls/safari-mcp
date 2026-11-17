@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><title>Safari MCP Fixture</title>
+<style>body{font-family:sans-serif;padding:20px} .menu{display:none} .wrap:hover .menu{display:block} #box{height:120px;overflow:auto;border:1px solid #ccc} #box div{height:400px}</style></head>
+<body>
+<h1>Fixture page</h1>
+<form id="f" onsubmit="event.preventDefault(); document.getElementById('out').textContent='submitted:'+document.getElementById('name').value; console.log('form submitted')">
+  <label for="name">Name</label> <input id="name" placeholder="Your name">
+  <select id="color"><option value="r">Red</option><option value="g">Green</option></select>
+  <label><input type="checkbox" id="agree"> Agree</label>
+  <textarea id="notes"></textarea>
+  <button type="submit">Send</button>
+</form>
+<button id="count" onclick="this.textContent='Clicked '+(++window.n)+'x'; console.warn('count click')">Click me</button>
+<button onclick="if(confirm('Sure?')) document.getElementById('out').textContent='confirmed'; else document.getElementById('out').textContent='cancelled'">Danger</button>
+<p id="out"></p>
+<div id="box"><div>scroll inside</div></div>
+<script>window.n=0; console.log('page boot'); setTimeout(()=>fetch(location.href+'?ping=1').then(r=>console.log('fetched', r.status)).catch(e=>console.error('fetch failed', e)), 50);</script>
+</body></html>
