@@ -27,7 +27,7 @@ It has no dependencies and needs no Safari extension. It uses AppleScript/JXA (`
    ```sh
    claude mcp get safari
    ```
-5. **Grant macOS permissions to your terminal app** when it asks. You can also set them in System Settings > Privacy & Security:
+5. **Grant macOS permissions to the app that runs Claude Code** (your terminal, IDE or desktop app) when macOS asks. You can also set them in System Settings > Privacy & Security:
    - Automation > Safari (required)
    - Screen & System Audio Recording (required for screenshots)
    - Accessibility (only for `native: true` input)
